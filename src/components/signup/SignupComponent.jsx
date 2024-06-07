@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./signupComponent.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../constant";
 
 export const SignupComponent = () => {
-  const [firstName, setFirstName] = useState("Default First Name");
-  const [lastName, setLastName] = useState("Default Last Name");
-  const [email, setEmail] = useState("default@email.com");
-  const [password, setPassword] = useState("DefaultPassword123");
-  const [confirmPassword, setConfirmPassword] = useState("DefaultPassword123");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [isChecked, setIsChecked] = useState(true);
   const navigate = useNavigate();
   const handleCheckboxChange = (event) => {
@@ -29,7 +30,7 @@ export const SignupComponent = () => {
       password: password,
     };
 
-    fetch("http://localhost:4000/user/register", {
+    fetch(`${API_URL}user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +57,7 @@ export const SignupComponent = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="input">
-            <img src="/assets/person.png" alt="" />
+            <img src="/user.jpeg" alt="" />
             <input
               type="text"
               placeholder="FirstName"
@@ -65,7 +66,7 @@ export const SignupComponent = () => {
             />
           </div>
           <div className="input">
-            <img src="/assets/person.png" alt="" />
+            <img src="/user.jpeg" alt="" />
             <input
               type="text"
               placeholder="LastName"
@@ -74,7 +75,7 @@ export const SignupComponent = () => {
             />
           </div>
           <div className="input">
-            <img src="/assets/email.png" alt="" />
+            <img src="/email.jpeg" alt="" />
             <input
               type="email"
               placeholder="Email id"
@@ -83,7 +84,7 @@ export const SignupComponent = () => {
             />
           </div>
           <div className="input">
-            <img src="/assets/password.png" alt="" />
+            <img src="/password.jpeg" alt="" />
             <input
               type="password"
               placeholder="NewPassword"
@@ -92,7 +93,7 @@ export const SignupComponent = () => {
             />
           </div>
           <div className="input">
-            <img src="/assets/confirmpassword.png" alt="" />
+            <img src="/password.jpeg" alt="" />
             <input
               type="password"
               placeholder="ConfirmPassword"
@@ -100,7 +101,7 @@ export const SignupComponent = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
-          <div className="input">
+          <div className="input d-flex ">
             <input
               type="checkbox"
               id="terms-and-conditions"

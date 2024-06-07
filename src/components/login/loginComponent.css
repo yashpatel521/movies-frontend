@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   background: black;
-  background-image: url("/Netflix-Background.jpg");
+  background-image: url("/bgLogin.jpeg");
   background-repeat: no-repeat;
   background-size: cover; /* This is the correct property for stretching the background image */
 }

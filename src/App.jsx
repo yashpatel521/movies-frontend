@@ -6,18 +6,22 @@ import Details from "./pages/Details";
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
 import Signup from "./pages/Signup";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/details" element={<Details />} />
-            <Route path="/menu" element={<Menu />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/" element={<Layout />}>
+              {" "}
+              <Route path="/" element={<Home />} />{" "}
+              <Route path="/details" element={<Details />} />
+              <Route path="/menu" element={<Menu />} />
+            </Route>
           </Route>
-          <Route path="/login" element={<Login />} />
+          <Route index path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
