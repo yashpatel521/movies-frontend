@@ -1,0 +1,139 @@
+:root {
+  --bgColor: red;
+}
+
+.SignupContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  background: none;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0Signuocontainer 0.1);
+  width: 480px;
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--bgColor);
+}
+
+.header {
+  background: var(--bgColor);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.text,
+.underline,
+.input {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.underline {
+  font-size: 15px;
+  color: var(--bgColor);
+}
+
+.inputs,
+.button,
+.input input {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--bgColor);
+  padding-left: 10px;
+}
+
+.button {
+  background: var(--bgColor);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.button:hover {
+  background: var(--bgColor);
+}
+
+.input img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.submit-container {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  margin-left: 30px;
+  border-radius: 30px;
+  background: var(--bgColor);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.SignupMain {
+  margin-top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  padding: 1px;
+  height: 100vh;
+  background: black;
+  background-image: url("/Netflix-Background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+.input input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.input label {
+  font-size: 14px;
+  color: white;
+  margin-top: 13px;
+}
+
+.SignupContainer button {
+  width: 50%;
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 120px;
+}

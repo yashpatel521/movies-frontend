@@ -1,0 +1,57 @@
+body {
+  background-color: black;
+}
+.movie__list {
+  padding: 0 3rem 3rem 3rem;
+  background-color: black;
+  margin-top: 110px;
+}
+
+.list__title {
+  font-size: 1.75rem;
+  margin: 2.5rem;
+  color: white;
+}
+
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button__container .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 1px #999;
+}
+
+.button__container .button:hover {
+  background-color: #581616;
+}
+
+.button__container .button:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button__container {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.button__container .button:first-child {
+  margin-right: 20px;
+}
